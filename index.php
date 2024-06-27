@@ -1,13 +1,3 @@
-<?
-if ($_SERVER['REQUEST_METHOD'] === 'POST')
-{
-  $file = '/tmp/sample-app.log';
-  $message = file_get_contents('php://input');
-  file_put_contents($file, date('Y-m-d H:i:s') . " Received a message.\n", FILE_APPEND);
-}
-else
-{
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +15,7 @@ else
     <section class="congratulations">
         <h1>Congratulations!</h1>
         <p>Your AWS Elastic Beanstalk <em>PHP</em> application is now running on your own dedicated environment in the AWS&nbsp;Cloud</p>
-        <p>You are running PHP version <?= phpversion() ?></p>
+        <p>You are running PHP version</p>
         <p>This environment is launched with Elastic Beanstalk PHP Platform</p>
     </section>
 
@@ -50,6 +40,3 @@ else
     <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
 </body>
 </html>
-<? 
-} 
-?>
